@@ -31,10 +31,7 @@ const IrregularVerbs = () => {
       return;
     }
 
-    const meaningResult =
-      language === "spanish"
-        ? irregularVerb["meaning"]
-        : irregularVerb["meaningPR"];
+    const meaningResult = irregularVerb[`meaning${language}`];
 
     let error = false;
 
@@ -78,20 +75,18 @@ const IrregularVerbs = () => {
     meaning.current.value = null;
   };
 
-  const handleShowResult = () => {
+  const handleShowResult = (e) => {
     setShowedResult((value) => !value);
     if (showedResult) {
       cleanForm();
       secondColumn.current.focus();
+      e.stopPropagation();
       return;
     }
 
     secondColumn.current.value = irregularVerb[2];
     thirdColumn.current.value = irregularVerb[3];
-    const meaningValue =
-      language === "spanish"
-        ? irregularVerb["meaning"]
-        : irregularVerb["meaningPR"];
+    const meaningValue = irregularVerb[`meaning${language}`];
     meaning.current.value = meaningValue;
   };
 
@@ -167,7 +162,11 @@ const IrregularVerbs = () => {
           >
             Submit
           </button>
-          <button className="Button" type="button" onClick={handleShowResult}>
+          <button
+            className="Button"
+            type="button"
+            onClick={(e) => handleShowResult(e)}
+          >
             Show result
           </button>
         </div>

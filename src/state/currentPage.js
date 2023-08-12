@@ -1,6 +1,6 @@
 import { proxy, useSnapshot } from "valtio";
 
-const state = proxy({ language: "spanish" });
+const state = proxy({ language: "SP" });
 
 export const setLanguage = (language) => {
   state.language = language;

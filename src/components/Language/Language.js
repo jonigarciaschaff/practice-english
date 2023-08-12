@@ -16,8 +16,9 @@ const Language = () => {
     <div className="mb-10">
       <span className="mr-2">Language:</span>
       <select ref={ref} onChange={handleChange}>
-        <option value="spanish">Spanish</option>
-        <option value="portuguese">Portuguese</option>
+        <option value="SP">Spanish</option>
+        <option value="PR">Portuguese</option>
+        <option value="CH">Chinese</option>
       </select>
     </div>
   );
