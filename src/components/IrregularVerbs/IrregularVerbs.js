@@ -131,7 +131,7 @@ const IrregularVerbs = () => {
         <input
           className="Input mb-2"
           type="text"
-          placeholder="2th"
+          placeholder="2nd"
           onKeyUp={(e) => handleKeyUp(e, 2)}
           onFocus={handleFocus}
           ref={secondColumn}
@@ -139,7 +139,7 @@ const IrregularVerbs = () => {
         <input
           className="Input mb-2"
           type="text"
-          placeholder="3th"
+          placeholder="3rd"
           ref={thirdColumn}
           onKeyUp={(e) => handleKeyUp(e, 3)}
           onFocus={handleFocus}
