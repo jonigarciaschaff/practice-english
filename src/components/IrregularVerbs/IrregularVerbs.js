@@ -167,7 +167,7 @@ const IrregularVerbs = () => {
             type="button"
             onClick={(e) => handleShowResult(e)}
           >
-            Show result
+            {showedResult ? "Hidden result" : "Show result"}
           </button>
         </div>
       </form>
